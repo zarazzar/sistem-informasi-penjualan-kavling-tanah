@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(rgba(106, 106, 106, 0.7),rgba(87, 87, 87, 0.7)), url(images/bgregis.jpg);
+        background-position: center;
+    background-size: cover;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        max-width: 400px;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    .login{
+        width: 400px;
+    }
+    form{
+        width: 250px;
+        margin: 60px auto;
+    }
+    h1{
+        margin: 20px;
+        text-align: center;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+    
+    p{
+        text-align: center;
+        margin: 10px;
+    }
+    hr{
+        border-top: 2px solid rgba(16, 72, 0, 0.932);
+    }
+    
+    .pic img{
+        width: 500px;
+        height: 100%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    
+    form label{
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 5px;
+    }
+    input{
+        width: 100%;
+        margin: 2px;
+        border: none;
+        outline: none;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid gray;
+    }
+    button{
+        border: none;
+        outline: none;
+        padding: 8px;
+        width: 252px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 5px;
+        background: rgba(16, 72, 0, 0.932);
+    }
+    button:hover{
+        background: rgba(2);
+    }
+    p{
+        margin: 20px;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+</style>
+
+    <meta charset="UTF-8">
+    <title>Registrasi SIPEKANAH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <form>
+                <h1>SIPEKANAH</h1>
+                <hr>
+                <p>Creat New Account</p>
+                <label>Username</label>
+                <input type="text" placeholder="Masukkan Username">
+                <label>E-mail</label>
+                <input type="text" placeholder="abc@exampl.com">
+                <label>Password</label>
+                <input type="password" placeholder="Masukkan Password">
+                <label>Repeat Password</label>
+                <input type="password" placeholder="Masukkan Ulang Password">
+                <button>Submit</button>
+                <p>
+                    <a href="login.html">Have An Account?</a>
+                </p>
+            <closeform></closeform></form>
+        </div>
+        <div class="pic">
+        </div>
+    </div>
+
+</body>
+</html>
