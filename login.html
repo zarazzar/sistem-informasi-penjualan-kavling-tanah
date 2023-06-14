@@ -83,7 +83,7 @@
         background: rgba(16, 72, 0, 0.932);
     }
     p{
-        margin: 20px;
+        margin: 10px;
     }
     a{
         color: black;
@@ -98,24 +98,55 @@
 <body>
     <div class="container">
         <div class="login">
-            <form>
+            <form onsubmit="return login(event)">
                 <h1>SIPEKANAH</h1>
                 <hr>
                 <p>Welcome!</p>
+                <select name="user_type" id="option">
+                    <option value="Admin">Admin</option>
+                    <option value="Pelanggan">Pelanggan</option>
+                </select>
+                <br>
                 <label>Username</label>
-                <input type="text" placeholder="Masukkan Username">
+                <input type="text" id="username" placeholder="Masukkan Username">
                 <label>Password</label>
-                <input type="password" placeholder="Masukkan Password">
-                <button>Submit</button>
+                <input type="password" id="password" placeholder="Masukkan Password">
+                <button type="submit">Login</button>
                 <p>
                     <a href="registrasi.html">Don't Have An Account?</a>
                 </p>
-            <closeform></closeform></form>
+            </form>
         </div>
         <div class="pic">
             <img src="images/background.jpg">
         </div>
+        <p id="message"></p>
     </div>
 
+    <script>
+        function login(event) {
+            event.preventDefault();
+            var option = document.getElementById("option").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var messageElement = document.getElementById("message");
+
+            if (option === "Admin" && username === "admin" && password === "12345") {
+                messageElement.innerHTML = "Login successful as Admin. Redirecting to home page...";
+                setTimeout(function() {
+                    window.location.href = "home.html";
+                }, 2000);
+            } else if (option === "Pelanggan" && username === "pelanggan" && password === "12345") {
+                messageElement.innerHTML = "Login successful as Pelanggan. Redirecting to home page...";
+                setTimeout(function() {
+                    window.location.href = "home.html";
+                }, 2000);
+            } else {
+                messageElement.innerHTML = "Username or password is incorrect.";
+            }
+
+            return false;
+        }
+    </script>
 </body>
 </html>
